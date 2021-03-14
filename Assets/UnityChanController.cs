@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UnityChanController : MonoBehaviour
 {
 
+
     //アニメーションするためのコンポーネントを入れる
     private Animator myAnimater;
     //Unityちゃんを移動させるコンポーネントを入れる
