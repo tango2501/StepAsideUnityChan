@@ -19,32 +19,30 @@ public class ItemGenerator : MonoBehaviour
     //Unityちゃん座標管理用
     private GameObject unitychan;
     private float unitychanpos;
-    private float anchorpos;
-    
-
-    
-
+    //生成場所決定用の指定座標
+    private float anchorpos = 40;
+ 
     // Start is called before the first frame update
     void Start()
     {
         // unitychan
         unitychan = GameObject.Find("unitychan");
         unitychanpos = unitychan.transform.position.z;
-        anchorpos = startPos + 15;
-
-
-        
-
+        //anchorpos = startPos;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //unityちゃんの座標を追跡
         unitychanpos = unitychan.transform.position.z;
+        //unityちゃんが指定座標を通り過ぎ、かつゴールより40m手前の時
         if(unitychanpos > anchorpos && unitychanpos < (goalPos-40))
         {
             Debug.Log(anchorpos);
+            //次の指定座標を更新
             anchorpos += 15;
+            //アイテム生成関数を呼び出す
             generator();
         }
 
@@ -52,7 +50,7 @@ public class ItemGenerator : MonoBehaviour
     }
 
 
-
+    //アイテム生成関数
     void generator()
     {
         //どのアイテムを出すのかをランダムに設定
@@ -63,6 +61,7 @@ public class ItemGenerator : MonoBehaviour
             for (float j = -1; j <= 1; j += 0.4f)
             {
                 GameObject cone = Instantiate(conePrefab);
+                //指定座標から40m前方に生成
                 cone.transform.position = new Vector3(4 * j, cone.transform.position.y, anchorpos+40);
             }
         }
@@ -80,12 +79,14 @@ public class ItemGenerator : MonoBehaviour
                 {
                     //コインを生成
                     GameObject coin = Instantiate(coinPrefab);
+                    //指定座標から40m前方に生成
                     coin.transform.position = new Vector3(posRange * j, coin.transform.position.y, (anchorpos+40) + offsetZ);//新規生成されたコインの位置情報
                 }
                 else if (7 <= item && item <= 9)
                 {
                     //車を生成
                     GameObject car = Instantiate(carPrefab);
+                    //指定座標から40m前方に生成
                     car.transform.position = new Vector3(posRange * j, car.transform.position.y, (anchorpos+40) + offsetZ);
                 }
             }
