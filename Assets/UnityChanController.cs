@@ -6,13 +6,12 @@ using UnityEngine.UI;
 public class UnityChanController : MonoBehaviour
 {
 
-
     //アニメーションするためのコンポーネントを入れる
     private Animator myAnimater;
     //Unityちゃんを移動させるコンポーネントを入れる
     private Rigidbody myRigidbody;
     //前方向の速度
-    private float velocityZ = 16f;
+    private float velocityZ = 16f;//16
     //横方向の速度
     private float velocityX = 10f;
     //上方向の速度

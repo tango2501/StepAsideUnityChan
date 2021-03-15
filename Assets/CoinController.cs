@@ -9,6 +9,7 @@ public class CoinController : MonoBehaviour
 
     //カメラ座標を格納
     private Vector3 camerapos;
+    private new Renderer renderer;
     
 
     // Start is called before the first frame update
@@ -18,7 +19,9 @@ public class CoinController : MonoBehaviour
         this.transform.Rotate(0, Random.Range(0, 360), 0);
         //カメラをシーン中から探す
         maincamera = GameObject.Find("Main Camera");
-        
+        //test
+        renderer = GetComponentInChildren<MeshRenderer>();
+        renderer.enabled = false;
     }
 
     // Update is called once per frame
@@ -38,14 +41,17 @@ public class CoinController : MonoBehaviour
             Debug.Log("Des");
         }
 
-    }
-
-    private void OnWillRenderObject()
-    {
         
     }
+    //test
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("WW");
+            renderer.enabled = true;
+        }
+    }
 
 
-
-    
 }

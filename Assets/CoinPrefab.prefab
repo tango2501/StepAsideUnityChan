@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 3472349147921517456}
   - component: {fileID: 4015797282627868745}
   - component: {fileID: 4015797282627868746}
+  - component: {fileID: 5571171338632768188}
   m_Layer: 0
   m_Name: CoinPrefab
   m_TagString: CoinTag
@@ -218,6 +219,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ac983266ed4264d8234e21503d2207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &5571171338632768188
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286181697785844010}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &7569605395563675449
 GameObject:
   m_ObjectHideFlags: 0

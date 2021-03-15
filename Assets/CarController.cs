@@ -16,6 +16,7 @@ public class CarController : MonoBehaviour
     {
         //カメラをシーン中から探す
         maincamera = GameObject.Find("Main Camera");
+        
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class CarController : MonoBehaviour
     {
         //カメラ座標を検出
         camerapos.z = maincamera.transform.position.z;
-
+        
         //このオブジェクトよりもカメラが奥に行ったとき
         if (this.gameObject.transform.position.z < camerapos.z)
         {
@@ -32,4 +33,5 @@ public class CarController : MonoBehaviour
             Debug.Log("Des");
         }
     }
+    
 }
